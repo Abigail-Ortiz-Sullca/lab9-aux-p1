@@ -11,6 +11,7 @@ Currently, two official plugins are available:
 - yarn 
 - yarn dev
 
+
 ## Adaptación al uso de TypeScript
 
 En el contexto de un entorno de desarrollo que utiliza TypeScript (tsx) en lugar de JavaScript (jsx), se realizarían ciertas modificaciones para explotar las ventajas que ofrece TypeScript.
@@ -28,6 +29,7 @@ type Product = {
   brand: string;
 };
 
+
 Esta definición de tipo Product facilitaría la manipulación de objetos Product, asegurando que siempre se esté trabajando con las propiedades correctas. Además, proporcionaría funcionalidades de autocompletado y sugerencias de código en el editor, lo que podría simplificar la escritura del código y reducir la probabilidad de errores.
 
 ### Implementación de useState y useEffect
@@ -42,4 +44,4 @@ Esto indica que product puede ser un objeto Product o null. Esto sirve como reco
 
 ### Seguridad de tipo en tiempo de compilación
 
-TypeScript ofrece seguridad de tipo en tiempo de compilación. Esto significa que TypeScript verificará que se estén utilizando los valores de manera segura y correcta de acuerdo con sus tipos al compilar el código. Si se realiza alguna acción insegura, como intentar acceder a una propiedad que no existe en un objeto, TypeScript advertirá sobre el error antes de ejecutar el código. Esto podría ayudar a prevenir errores y hacer que el código sea más fácil de entender y mantener.
+TypeScript ofrece seguridad de tipo en tiempo de compilación. Esto significa que TypeScript verificará que se estén utilizando los valores de manera segura y correcta de acuerdo con sus tipos al compilar el código. Si se realiza alguna acción insegura, como intentar acceder a una propiedad que no existe en un objeto, TypeScript advertirá sobre el error antes de ejecutar el código. Esto podría ayudar a prevenir errores y hacer que el código sea más fácil de entender y mantener.
