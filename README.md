@@ -11,15 +11,15 @@ Currently, two official plugins are available:
 - yarn 
 - yarn dev
 
-# Adaptación al uso de TypeScript
+## Adaptación al uso de TypeScript
 
-Este proyecto está configurado para utilizar TypeScript (`.tsx`) en lugar de JavaScript (`.jsx`). Esto permite explotar las ventajas que ofrece TypeScript, como la definición de tipos y la seguridad de tipo en tiempo de compilación.
+En el contexto de un entorno de desarrollo que utiliza TypeScript (tsx) en lugar de JavaScript (jsx), se realizarían ciertas modificaciones para explotar las ventajas que ofrece TypeScript.
 
-## Definición de tipos para Product
+### Definición de tipos para Product
 
-En TypeScript, se establece un tipo para `Product` que define sus propiedades y los tipos de datos que estas pueden tener. Aquí tienes un ejemplo de esta definición:
+En TypeScript, se podría establecer un tipo para Product que defina sus propiedades y los tipos de datos que estas pueden tener. Un ejemplo de esta definición sería:
 
-```typescript
+typescript
 type Product = {
   id: number;
   title: string;
@@ -27,15 +27,19 @@ type Product = {
   price: number;
   brand: string;
 };
-# **Uso de TypeScript en el Proyecto**
 
-Este proyecto utiliza TypeScript para facilitar la manipulación de objetos, en particular, los objetos `Product`. Esto asegura que siempre se esté trabajando con las propiedades correctas y proporciona funcionalidades de autocompletado y sugerencias de código en el editor, lo que puede simplificar la escritura del código y reducir la probabilidad de errores.
+Esta definición de tipo Product facilitaría la manipulación de objetos Product, asegurando que siempre se esté trabajando con las propiedades correctas. Además, proporcionaría funcionalidades de autocompletado y sugerencias de código en el editor, lo que podría simplificar la escritura del código y reducir la probabilidad de errores.
 
-## **Implementación de useState y useEffect**
+### Implementación de useState y useEffect
 
-En este proyecto, se utilizan `useState` y `useEffect` de React en conjunto con TypeScript. Se pueden proporcionar anotaciones de tipo para los valores de estado y los parámetros de las funciones de efecto. Por ejemplo, en el componente `Card`, se anota el estado del producto de la siguiente manera:
+Al utilizar useState y useEffect en TypeScript, se pueden proporcionar anotaciones de tipo para los valores de estado y los parámetros de las funciones de efecto. Por ejemplo, en el componente Card, se podría anotar el estado del producto de la siguiente manera:
 
-```typescript
+typescript
 const [product, setProduct] = useState<Product | null>(null);
 
 
+Esto indica que product puede ser un objeto Product o null. Esto sirve como recordatorio de que product podría ser null y que se necesita manejar este caso en el código.
+
+### Seguridad de tipo en tiempo de compilación
+
+TypeScript ofrece seguridad de tipo en tiempo de compilación. Esto significa que TypeScript verificará que se estén utilizando los valores de manera segura y correcta de acuerdo con sus tipos al compilar el código. Si se realiza alguna acción insegura, como intentar acceder a una propiedad que no existe en un objeto, TypeScript advertirá sobre el error antes de ejecutar el código. Esto podría ayudar a prevenir errores y hacer que el código sea más fácil de entender y mantener.
